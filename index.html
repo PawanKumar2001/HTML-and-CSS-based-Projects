@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Web 0.1</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navi">
+            <ul>
+                <li><a href="" class="ni">Home</a></li>
+                <li><a href="" class="ni">About</a></li>
+                <li><a href="" class="ni">Help</a></li>
+                <li><a href="" class="ni">Contact</a></li>
+            </ul>
+        </nav>
+        <input type="text" class="search" placeholder="Search for product">
+        <button class="btn">search</button>
+        <img class="headimg" src="/favicon_io/favicon-32x32.png" alt="tag">
+        <h1 class="nm">COMPANY</h1>
+    </header>
+    <div class="container">
+        <div class="carcont">
+            <button id="lbut" class="butt"><</button>
+                    <div class="imgcontainer">
+                        <img src="/pexels-jan-kroon-1038935.jpg" alt="EH" id="one">
+                        <img src="/alex-robert-sbwuDopIUPI-unsplash.jpg" alt="Eh2" id="two">
+                        <img src="/wallpaperflare.com_wallpaper.jpg" alt="Eh3" id="three">
+                    </div>
+                    <button id="but" class="butt">></button>
+        </div>
+        <div class="cardhead">
+            <h3>This is card heading!</h3>
+        </div>
+        <div class="topcards">
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+        </div>
+        <div class="cardhead">
+            <h3>This is second card heading!</h3>
+        </div>
+        <div class="topcards">
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+            <div class="cbody">
+                <img src="/favicon_io/android-chrome-512x512.png" alt="Product img">
+                <h3>Product name</h3>
+                <p>product info</p>
+                <p>product price</p>
+            </div>
+        </div>
+    </div>
+    <footer>COPYRIGHT COMPANY &reg;</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $('#two').hide();
+        $('#three').hide();
+        let fclicks = 0;
+        $(document).ready(function () {
+            $('#but').click(function () {
+                if (fclicks == 0) {
+                    $('#two').fadeIn(1000);
+                    $('#one').fadeOut(1000);
+                    fclicks = 1;
+                }
+                else if (fclicks == 1) {
+                    $('#three').fadeIn(1000);
+                    $('#two').fadeOut(1000);
+                    fclicks = 2;
+                }
+                else if (fclicks == 2) {
+                    $('#one').fadeIn(1000);
+                    $('#three').fadeOut(1000);
+                    fclicks = 0;
+                }
+            });
+            $('#lbut').click(function () {
+                if (fclicks == 0) {
+                    $('#three').fadeIn(1000);
+                    $('#one').fadeOut(1000);
+                    fclicks = 2;
+                }
+                else if (fclicks == 2) {
+                    $('#two').fadeIn(1000);
+                    $('#three').fadeOut(1000);
+                    fclicks = 1;
+                }
+                else if (fclicks == 1) {
+                    $('#one').fadeIn(1000);
+                    $('#two').fadeOut(1000);
+                    fclicks = 0;
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
